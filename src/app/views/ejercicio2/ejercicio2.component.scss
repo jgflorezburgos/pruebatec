@@ -1,0 +1,136 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(
+      350px,
+      1fr
+    )
+  );
+  gap: 16px;
+  place-items: center;
+  min-width: 80%;
+  max-width: 1024px;
+  margin: auto;
+  margin-top: 8rem;
+  
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+  margin-right: 20px;
+  margin-left: 20px;
+  height: 20rem;
+  max-width: 40rem;
+  min-width: 100px;
+  border: solid red 1px;
+}
+
+.card-image {
+  width: 30%;
+  height: auto;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+img{
+  max-height: 15rem;
+  max-width: 100%;
+}
+
+.card-content {
+  max-width: 20rem;
+  max-height: 20rem;
+  min-width: 50px;
+  padding: 10px;
+
+}
+.description-text{
+overflow: hidden;
+  // height: 6rem;
+  width: 20rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  
+}
+
+.description-text p{
+  
+}
+
+.card-title {
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  margin-top: 10px;
+}
+
+// .card-description {
+//   margin-bottom: 10px;
+//   font-size: 1.2rem;
+//   line-height: 1.5rem;
+// }
+
+.card-price {
+  // margin-bottom: 20px;
+  margin: 15px 0px;
+}
+
+.card-button {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+
+.description {
+  max-height: 50px;
+  overflow: hidden;
+}
+
+
+.add-to-cart-button {
+  background-color: #FCD34D;
+  color: #333;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.view-cart-button {
+  background-color: #03d9ff;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+@media (max-width: 321px) {
+  .card {
+    display: block;
+    height: 30rem;
+    max-width: 20rem;
+  }
+
+  .description-text{
+    overflow: hidden;
+      // height: 6rem;
+      width: 15rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      
+    }
+    img{
+      max-height: 10rem;
+      max-width: 100%;
+    }
+
+}

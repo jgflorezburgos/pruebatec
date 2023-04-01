@@ -1,0 +1,19 @@
+
+<div class="carrito">
+    <h2>CARRITO DE COMPRAS</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let products of cartItems">
+          <td>{{ products.title }}</td>
+          <td>{{ products.price | currency }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>Total: {{ getTotal() | currency }}</h3>
+  </div>

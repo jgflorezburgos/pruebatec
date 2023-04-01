@@ -1,0 +1,19 @@
+<h2 style="text-align:center; font-size: 30px; margin-top: 10px;">DETALLE USERS</h2>
+<div class="lista">
+    <ul *ngIf="usuario" class="list">
+        <li>Nombre: {{ usuario.name }}</li>
+        <li>Nombre de Usuario: {{usuario.username}}</li>
+        <li>Telefono: {{usuario.phone}}</li>
+        <li>Direccion:</li>
+        <ul>
+            <li>Ciudad: {{ usuario.address.city}}</li>
+            <li>Calle: {{usuario.address.street}}</li>
+        </ul>
+        <li>Sitio Web: {{usuario.website}}</li>
+        <li>Compañia:</li>
+        <ul>
+            <li>nombre: {{ usuario.company.name}}</li>
+        </ul>
+    </ul>
+</div>
+

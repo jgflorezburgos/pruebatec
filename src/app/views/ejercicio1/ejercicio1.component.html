@@ -1,0 +1,32 @@
+<div class="ej1container">
+    <h2 class="title1">
+        LISTA DE USUARIOS
+    </h2>
+    <div class="container-table">
+        <div>
+            <input type="text" class="buscar-input" placeholder="Buscar Usuario..." [(ngModel)]="searchText">
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of usuarios | search: searchText"
+                    (click)="toDetalles(item.id)"    >
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.email }}</td>
+                    <td>{{ item.phone }}</td>
+                </tr>
+            </tbody>
+        </table>  
+    </div>
+</div>
+   
+
+

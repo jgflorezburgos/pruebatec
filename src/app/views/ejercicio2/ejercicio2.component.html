@@ -1,0 +1,29 @@
+<h2 style="font-size: 40px; margin-top: 15px; text-align: center;">
+  CARRITO DE COMPRAS
+</h2>
+
+<div class="container">
+<div class="card" *ngFor="let product of products">
+  <div class="card-image">
+    <img [src]="product.image" alt="">
+  </div>
+  <div class="card-content">
+    <div class="card-title">
+      <h3>{{ product.title }}</h3>
+    </div>
+    <div class="card-description">
+      <div class="description-text">
+        <p>{{ product.description}} </p>
+      </div>
+    </div>
+    <div class="card-price">
+      <p>{{ product.price | currency }}</p>
+    </div>
+    <div class="card-button">
+      <button class="add-to-cart-button" (click)="addToCart(product)">Agregar al carrito</button>
+      <button class="view-cart-button" (click)="toggleCart()">Ver Carrito</button>
+    </div>
+  </div>
+</div>
+</div>
+<app-carrito [cartItems]="cartItems" *ngIf="showCart"></app-carrito>
